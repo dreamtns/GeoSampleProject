@@ -18,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setMethod();
+
+    }
+
+    private void setMethod() {
         CRSFactory crsFactory = new CRSFactory();
         CoordinateReferenceSystem WGS84 = crsFactory.createFromName("epsg:4326");
         CoordinateReferenceSystem UTM = crsFactory.createFromName("epsg:25833");
